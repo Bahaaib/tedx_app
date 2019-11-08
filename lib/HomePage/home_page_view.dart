@@ -118,10 +118,6 @@ class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
       setState(() {});
     });
 
-    _controllerFirst.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {}
-    });
-
     _controllerFirst.forward();
   }
 
@@ -135,11 +131,6 @@ class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
     _offsetSecond.addListener(() {
       setState(() {});
     });
-
-    _controllerSecond.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {}
-    });
-
     _controllerSecond.forward();
   }
 
@@ -153,11 +144,6 @@ class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
     _offsetThird.addListener(() {
       setState(() {});
     });
-
-    _controllerThird.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {}
-    });
-
     _controllerThird.forward();
   }
 
