@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tedx_app/HomePage/home_page_viewmodel.dart';
+import 'package:tedx_app/SpeakersPage/speakers_page.dart';
 import 'package:tedx_app/shared_widgets/fab_menu.dart';
 
 class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
@@ -97,8 +98,8 @@ class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
               }).addActionFab(Icons.people,
                           color: _primaryColor,
                           heroTag: 'speakers', onPressed: () {
-                //Navigator.push(context,
-                //  MaterialPageRoute(builder: (context) => PricePage()));
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SpeakersPage()));
               }))
             ],
           )
