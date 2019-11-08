@@ -21,4 +21,13 @@ class TextUtils {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   ];
+
+  static List<String> partnersLogos = [
+    'assets/nrj.jpg',
+    'assets/nrj.jpg',
+    'assets/nrj.jpg',
+    'assets/nrj.jpg',
+    'assets/nrj.jpg',
+    'assets/nrj.jpg',
+  ];
 }

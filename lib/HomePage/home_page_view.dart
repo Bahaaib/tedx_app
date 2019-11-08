@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tedx_app/HomePage/home_page_viewmodel.dart';
 import 'package:tedx_app/SpeakersPage/speakers_page.dart';
+import 'package:tedx_app/PartnersPage/partners_page.dart';
 import 'package:tedx_app/shared_widgets/fab_menu.dart';
 
 class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
@@ -92,9 +93,9 @@ class HomePageView extends HomePageViewModel with TickerProviderStateMixin {
                 print('Clicked info icon');
               }).addActionFab(Icons.verified_user,
                           color: _primaryColor,
-                          heroTag: 'sponsors', onPressed: () {
-                //Navigator.push(context,
-                //  MaterialPageRoute(builder: (context) => StatsPage()));
+                          heroTag: 'partners', onPressed: () {
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PartnersPage()));
               }).addActionFab(Icons.people,
                           color: _primaryColor,
                           heroTag: 'speakers', onPressed: () {
