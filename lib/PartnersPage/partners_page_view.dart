@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tedx_app/PartnersPage/partners_page_viewmodel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:tedx_app/text_utils.dart';
 
 class PartnersPageView extends PartnersPageViewModel {
   int _currentPage = 0;
@@ -14,11 +13,18 @@ class PartnersPageView extends PartnersPageViewModel {
     0xff00FF00
   ];
   final int _primaryColor = 0xff6ec1e4;
+  @override
+  void initState() {
+      getData();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body:   data==null ? Center(
+        child: CircularProgressIndicator(),
+      ): Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
@@ -80,7 +86,8 @@ class PartnersPageView extends PartnersPageViewModel {
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(color: Colors.grey, blurRadius: 15.0, spreadRadius: -5.0)
       ]),
-      child: Image.asset(TextUtils.partnersLogos[position]),
+      child: Image.network('https://seasonsapp.co/ted/public/partner/${data['partners']['data'][position]['image']}'),
     ));
   }
+
 }
